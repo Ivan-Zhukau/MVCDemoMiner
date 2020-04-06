@@ -27,12 +27,12 @@ public class MinerController {
 
 	public boolean isXBonusAvailable() {
 
-		return miner.bank.score > 10;
+		return miner.bank.score > BonusFactory.X_BONUS_COST;
 	}
 
 	public boolean isPlusBonusAvailable() {
 
-		return miner.bank.score % 15 == 0;
+		return miner.bank.score % BonusFactory.PLUS_BONUS_COST == 0;
 	}
 
 }
