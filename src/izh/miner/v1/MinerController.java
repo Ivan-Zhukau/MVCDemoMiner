@@ -1,4 +1,4 @@
-package izh.miner;
+package izh.miner.v1;
 
 public class MinerController {
 

@@ -1,19 +1,15 @@
-package izh.miner.copy;
+package izh.miner.v1;
 
 import javax.swing.JFrame;
-
-import izh.miner.copy.controller.MinerController;
-import izh.miner.copy.model.Miner;
-import izh.miner.copy.view.MinerWindowBuilder;
 
 public class MinerEntryPoint {
 
 	public static void main(String[] args) {
-		//Model layer
+		// Model layer
 		Miner miner = new Miner();
-		//Controller layer
+		// Controller layer
 		MinerController controller = new MinerController(miner);
-		//Interface layer
+		// Interface layer
 		JFrame frame = new MinerWindowBuilder().build(controller);
 		frame.setVisible(true);
 	}

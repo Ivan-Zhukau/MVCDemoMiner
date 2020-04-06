@@ -1,8 +1,8 @@
-package izh.miner.copy.model;
+package izh.miner.v1;
 
 public class Miner {
 
-	public Bank bank;
+	Bank bank;
 
 	int increment = 1;
 

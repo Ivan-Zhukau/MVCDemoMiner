@@ -1,4 +1,4 @@
-package izh.miner.copy.model;
+package izh.miner.v2.model;
 
 public class BonusFactory {
 
@@ -7,6 +7,6 @@ public class BonusFactory {
 	}
 
 	public PlusBonus createPlusBonus() {
-		return new PlusBonus(15, 20, 10);
+		return new PlusBonus(15, 20);
 	}
 }

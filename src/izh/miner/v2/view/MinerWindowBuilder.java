@@ -1,4 +1,4 @@
-package izh.miner;
+package izh.miner.v2.view;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -10,6 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import izh.miner.v2.controller.MinerController;
+import izh.miner.v2.model.BonusFactory;
+import izh.miner.v2.model.PlusBonus;
+import izh.miner.v2.model.XBonus;
+
 public class MinerWindowBuilder {
 
 	private JButton xButton;
@@ -17,7 +22,7 @@ public class MinerWindowBuilder {
 	private MinerController minerController;
 	private JLabel scorelabel;
 
-	JFrame build(MinerController minerController) {
+	public JFrame build(MinerController minerController) {
 		this.minerController = minerController;
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,6 +50,7 @@ public class MinerWindowBuilder {
 			public void actionPerformed(ActionEvent e) {
 				XBonus xBonus = new BonusFactory().createXBonus();
 				minerController.activateXBonus(xBonus);
+				update();
 			}
 		});
 		comp.add(xButton);
@@ -56,6 +62,7 @@ public class MinerWindowBuilder {
 			public void actionPerformed(ActionEvent e) {
 				PlusBonus plusBonus = new BonusFactory().createPlusBonus();
 				minerController.activatePlusBonus(plusBonus);
+				update();
 			}
 		});
 		plusButton.setEnabled(false);

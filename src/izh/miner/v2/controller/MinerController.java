@@ -1,8 +1,8 @@
-package izh.miner.copy.controller;
+package izh.miner.v2.controller;
 
-import izh.miner.copy.model.Miner;
-import izh.miner.copy.model.PlusBonus;
-import izh.miner.copy.model.XBonus;
+import izh.miner.v2.model.Miner;
+import izh.miner.v2.model.PlusBonus;
+import izh.miner.v2.model.XBonus;
 
 public class MinerController {
 

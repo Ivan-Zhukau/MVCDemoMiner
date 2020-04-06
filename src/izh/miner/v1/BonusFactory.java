@@ -1,4 +1,4 @@
-package izh.miner;
+package izh.miner.v1;
 
 public class BonusFactory {
 
@@ -7,6 +7,6 @@ public class BonusFactory {
 	}
 
 	PlusBonus createPlusBonus() {
-		return new PlusBonus(15, 20, 10);
+		return new PlusBonus(15, 20);
 	}
 }
